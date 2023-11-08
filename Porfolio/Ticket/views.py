@@ -14,11 +14,13 @@ def purchaseTicket(request, id):
     context = {'ticket': ticket}
     return render(request, 'ticket_purchase.html', context)
 
+
 def allTickets(request):
     title = 'All tickets'
     tickets = Ticket.objects.all()
     context = {'tickets': tickets, 'title': title}
     return render(request, 'tickets.html', context)
+
 
 @login_required
 def create_ticket(request, event_name):
@@ -34,14 +36,15 @@ def create_ticket(request, event_name):
             return redirect('viewEventTickets', id=event.id)
     else:
         form = TicketCreationForm()
-    
-    return render(request, 'create_ticket.html', {'form': form, 'event_name':event_name, 'title': title})
+
+    return render(request, 'create_ticket.html', {'form': form, 'event_name': event_name, 'title': title})
+
 
 @login_required
 def update_ticket(request, id):
     title = 'Edit ticket'
     ticket = Ticket.objects.get(id=id)
-    
+
     if request.method == 'POST':
         form = TicketUpdateForm(request.POST, instance=ticket)
         if form.is_valid():
@@ -50,8 +53,9 @@ def update_ticket(request, id):
             return redirect('viewEventTickets', id=event.id)
     else:
         form = TicketUpdateForm(instance=ticket)
-    
+
     return render(request, 'update_ticket.html', {'form': form, 'ticket': ticket, 'title': title})
+
 
 @login_required
 def delete_ticket(request, id):

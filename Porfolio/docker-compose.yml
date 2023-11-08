@@ -1,0 +1,31 @@
+version: '4.24'
+
+services:
+  web:
+    build: .
+    command: gunicorn Porfolio.wsgi:application --bind 0.0.0.0:8000
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    environment:
+      - MYSQL_HOST=db
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=Password
+      - MYSQL_DB=eventify_DB
+  db:
+    image: mysql:5.7  # or the version you prefer
+    volumes:
+      - mysql_data:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=Password
+      - MYSQL_DATABASE=eventify_DB
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=Password
+    ports:
+      - "3306:3306"
+
+volumes:
+  mysql_data:

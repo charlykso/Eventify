@@ -26,7 +26,8 @@ SECRET_KEY = 'django-insecure-s^5zhwmje$ht_f75b+7m@mmyv3(&kgik+7s_%6ocd&-f5$-u7j
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.5.148', '127.0.0.1', '192.168.0.112', '192.168.103.148']
+ALLOWED_HOSTS = ['192.168.5.148', '127.0.0.1',
+                 '192.168.0.112', '192.168.103.148']
 
 CORS_ORIGIN_ALLOW_ALL = True
 
@@ -95,9 +96,9 @@ WSGI_APPLICATION = 'Porfolio.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'eventify',
+        'NAME': 'eventify_DB',
         'USER': 'root',
-        'PASSWORD': 'pass',
+        'PASSWORD': 'Password',
         'HOST': 'localhost',  # Or an IP Address that your DB is hosted on
         'PORT': '3306',
     }
@@ -156,14 +157,14 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # settings.py
 
-#sending email
+# sending email
 
-EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST='smtp.gmail.com'
-EMAIL_PORT=25
-EMAIL_USE_TLS=True
-EMAIL_HOST_USER='eventify141@gmail.com'
-EMAIL_HOST_PASSWORD='bxyrevolpkultjsa'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 25
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'eventify141@gmail.com'
+EMAIL_HOST_PASSWORD = 'bxyrevolpkultjsa'
 # EMAIL_HOST_PASSWORD='uclsvjnzpuxhvoqe'
 # EMAIL_HOST_USER='charlykso141@gmail.com'
 # EMAIL_HOST_PASSWORD='ulyzonftpvotdypm'

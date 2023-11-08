@@ -3,10 +3,11 @@ from django.conf import settings
 from django.contrib import messages
 from django.core.mail import EmailMessage
 
+
 class SendMail:
 
     def send_email_to_user(user_email, subject, message, byte_stream):
-        
+
         try:
             message = EmailMessage(
                 subject,
