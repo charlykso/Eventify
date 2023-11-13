@@ -1,6 +1,22 @@
 version: '4.24'
 
 services:
+  db:
+    image: mariadb  # or the version you prefer
+    env_file: .env
+    command: 
+      - --innodb-fast-shutdown=1
+      # - --innodb-force-recovery=1
+    volumes:
+      - mariadb_data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: ikenna123
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    ports:
+      - "3306:3306"
+
   web:
     build: .
     command: gunicorn Porfolio.wsgi:application --bind 0.0.0.0:8000
@@ -11,21 +27,11 @@ services:
     depends_on:
       - db
     environment:
-      - MYSQL_HOST=db
-      - MYSQL_USER=root
-      - MYSQL_PASSWORD=Password
-      - MYSQL_DB=eventify_DB
-  db:
-    image: mysql:5.7  # or the version you prefer
-    volumes:
-      - mysql_data:/var/lib/mysql
-    environment:
-      - MYSQL_ROOT_PASSWORD=Password
-      - MYSQL_DATABASE=eventify_DB
-      - MYSQL_USER=root
-      - MYSQL_PASSWORD=Password
-    ports:
-      - "3306:3306"
+      DJANGO_DB_HOST: ${DJANGO_DB_HOST}
+      DJANGO_DB_NAME: ${DJANGO_DB_NAME}
+      DJANGO_DB_USER: ${DJANGO_DB_USER}
+      DJANGO_DB_PASSWORD: ${DJANGO_DB_PASSWORD}
+      DJANGO_DB_PORT: ${DJANGO_DB_PORT}
 
 volumes:
-  mysql_data:
+  mariadb_data:

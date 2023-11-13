@@ -1,0 +1,406 @@
+.main-container{
+    background: #FFF8F8;
+}
+.header{
+    background-color: #F8F9FA;
+    padding-bottom: 0 !important;
+}
+.inner-container{
+    margin: auto;
+    /* background-color: red; */
+    padding: 2rem 0;
+}
+.upcoming-event-text{
+    text-align: justify;
+}
+.upcoming-event-text-container{
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+}
+.small-nav{
+    display: none !important;
+}
+.see-upcoming-event{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.02em;
+    background: linear-gradient(180deg, #DD8140 8.85%, #C21B54 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.upcoming-event{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    border-left: 5px solid #D8614D;
+    transform: rotate(0.91deg);
+    padding-left: 5px;
+}
+.remove-content{
+    display: none;
+}
+.all-event-con>div:first-child{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.all-event-con>div:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.event-container{
+    width: 100vw;
+    height: 50vh;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+/* .event-container::before {
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: 1;
+} */
+.start-date{
+    width: 108px;
+    height: 100px;
+    background: rgba(0, 0, 0, 0.80);
+    /* mix-blend-mode: multiply; */
+    border-radius: 0px 0px 20px 20px;
+    color: #fff;
+}
+.start-date>h2{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    text-align: center;
+    padding-top: 5px;
+}
+.description h3>a{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+.description h3 a:hover{
+    text-decoration: none;
+    color: #DD8140;
+}
+.description p{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+}
+.description .buy{
+    background: linear-gradient(270deg, #EF924B 0%, #C52553 100%);
+    border-radius: 12px;
+}
+.buy>a{
+    color: #000;
+}
+.buy>a:hover{
+    text-decoration: none;
+}
+.list-categories{
+    /* background-color: green; */
+    /* display: grid; */
+    justify-content: space-around;
+}
+.list-categories .category-item a{
+    color: #fff;
+}
+.by-category h2{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+    border-left: 5px solid #D8614D;
+    transform: rotate(0.91deg);
+    padding-left: 5px;
+}
+.list-categories>div{
+    width: 200px;
+    height: 180px;
+    text-align: center;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 30px;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* footer styling */
+.footer {
+    width: 100%;
+    /* height: 250px; */
+    padding: 20px 0;
+    background-position: center;
+    background-size: cover;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: #ffffff;
+}
+.middle-footer {
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.02em;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+}
+.middle-footer h4{
+    font-family: 'Inter';
+    margin: 15px auto;
+    width: 100%;
+    border-bottom: 2px solid #FFFFFF;
+    line-height: 58px;
+    letter-spacing: 0.02em;
+}
+.footer-container .footer-menu ul li a{
+    color: #ffffff;
+}
+.footer-container .footer-menu ul li a:hover {
+    text-decoration: none;
+    color: #EF924B;
+}
+.footer-container .footer-social a{
+    color: #ffffff;
+}
+.footer-bottom ul li a{
+    color: #ffffff;
+}
+/* @media (min-width: 768px) {
+    .category-item{
+        flex-basis: 29%;
+    }
+} */
+
+/* single event styling */
+/* .tickets-heading{
+    border-bottom: 1px solid #E5DFDF;
+} */
+.purchase-button{
+    background: linear-gradient(270deg, #EF924B 0%, #C52553 100%);
+    border-radius: 12px;
+    padding: 5px 10px;
+    color: #000;
+}
+.create-ticket{
+    background: linear-gradient(270deg, #EF924B 0%, #C52553 100%);
+    border-radius: 12px;
+    padding: 5px 10px;
+    color: #000;
+}
+
+.ticket-main{
+    display: flex;
+    justify-content: space-between;
+}
+.ticket-right{
+    width: 300px;
+    background-position: center;
+    background-size: cover;
+}
+
+/* payment style */
+.main-payment{
+    padding: 10px 0px;
+}
+.make-payment{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    border-left: 5px solid #D8614D;
+    transform: rotate(0.91deg);
+    padding-left: 5px;
+}
+.payment-form{
+    margin: auto;
+    background: #FFF8F8;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+.form-group button{
+    background: linear-gradient(270deg, #EF924B 0%, #C52553 100%);
+}
+.payment-details{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* for eventcategory */
+
+.eventCategory{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+/* for the nav */
+
+/* .navigation{
+    align-self: center;
+    height: 100%;
+} */
+.navigation ul li a{
+    color: linear-gradient(270deg, #EF924B 0%, #C52553 100%);;
+}
+.navigation ul li a:hover{
+    text-decoration: none;
+}
+.navigation>ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* for all tickets */
+.allticket-main {
+    display: flex;
+    flex-wrap: wrap;
+}
+.inside-allticket{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #333;
+    /* margin-bottom: 5px; */
+    padding-bottom: 5px;
+}
+
+.inside-allticket a:nth-child(1) {
+    margin-bottom: 15px;
+}
+.allticket-right {
+    width: 300px;
+    background-position: center;
+    background-size: cover;
+}
+
+/* for my events on organisers page */
+div.main-createButton{
+    display: flex;
+    justify-content: space-between;
+}
+.button-part button {
+    background: linear-gradient(270deg, #EF924B 0%, #C52553 100%);
+    border-radius: 12px;
+}
+
+/* for create ticket  */
+.create_ticket_main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .allticket-left>a.update_button{
+        margin-bottom: 5px;
+    }
+    
+}
+
+@media (max-width: 768px) {
+    .container{
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    .upcoming-event-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .inner-container{
+        padding: 0;
+    }
+    /* .upcoming-event-button{
+        background-color: red;
+    } */
+    .main-container{
+        padding-top: 0;
+    }
+    .small-nav {
+        display: flex !important;
+        padding: 0;
+    }
+    .navbar{
+        padding: 1rem 0.2rem !important;
+    }
+    .logo{
+        display: none;
+    }
+    .navigation {
+        display: none;
+    }
+    .footer-bottom{
+        flex-direction: column;
+        padding-top: 0;
+    }
+    footer{
+        padding-bottom: 20px;
+    }
+    .footer{
+        height: inherit;
+    }
+    .footer-menu{
+        display: none;
+    }
+    .all-event-con>div:first-child {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    .all-event-con>div:last-child {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .small-nav{
+        width: 100%;
+    }
+    .nav-container{
+        display: flex;
+        justify-content: space-between;
+        width: inherit;
+    }
+    .inner-navebar{
+        text-align: center;
+    }
+    .ham-button{
+        margin-bottom: 10px;
+    }
+}
