@@ -12,11 +12,16 @@ from django.contrib import messages
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from .collectives.sendCodeToMail import sendCodeToMail
+from django.contrib.auth.decorators import user_passes_test
 # from django.core.mail import send_mail
 # from .collectives.sendMail import SendMail
 
 
 # Create your views here.
+def admin_required(user):
+    return user.is_superuser
+
+
 def payment(request, id):
     title = 'Make payment'
     ticket = Ticket.objects.get(id=id)
@@ -167,7 +172,7 @@ def send_email(request):
     print(sent_count)
     return redirect('/')
 
-
+@user_passes_test(admin_required)
 def present(request, email, code):
     payment = Payment.objects.get(code=code)
     if payment.present == True:

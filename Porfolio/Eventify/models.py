@@ -43,7 +43,7 @@ class Category(models.Model):
     created = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return str(self.id)
+        return f"{self.event_id.name} {self.type}"
 
 
 class UserProfile(models.Model):

@@ -93,22 +93,22 @@ WSGI_APPLICATION = 'Porfolio.wsgi.application'
 # }
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.getenv('DJANGO_DB_NAME', 'eventify_DB'),
-        'USER': os.getenv('DJANGO_DB_USER', 'eventify_user'),
-        'PASSWORD': os.getenv('DJANGO_DB_PASSWORD', 'Password'),
-        'HOST': os.getenv('DJANGO_DB_HOST', 'db'),
-        'PORT': os.getenv('DJANGO_DB_PORT', '3306'),
-    }
     # 'default': {
     #     'ENGINE': 'django.db.backends.mysql',
-    #     'NAME': 'eventify_DB',
-    #     'USER': 'eventify_user',
-    #     'PASSWORD': 'Password',
-    #     'HOST': 'localhost',  # Or an IP Address that your DB is hosted on
-    #     'PORT': '3306',
+    #     'NAME': os.getenv('DJANGO_DB_NAME', 'eventify_DB'),
+    #     'USER': os.getenv('DJANGO_DB_USER', 'eventify_user'),
+    #     'PASSWORD': os.getenv('DJANGO_DB_PASSWORD', 'Password'),
+    #     'HOST': os.getenv('DJANGO_DB_HOST', 'db'),
+    #     'PORT': os.getenv('DJANGO_DB_PORT', '3306'),
     # }
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'eventify_DB',
+        'USER': 'eventify_user',
+        'PASSWORD': 'Password',
+        'HOST': 'localhost',  # Or an IP Address that your DB is hosted on
+        'PORT': '3306',
+    }
 }
 
 # Password validation
